@@ -10,6 +10,20 @@ function speedPush(){
 
     console.log("push: ", end - start, "ms")
 }
+function speedPushReverse(){
+    let start = new Date()
+
+    let list = []
+
+    for(let i = 0; i < 50000; i++){
+        list.push(i)
+    }
+    list = list.reverse()
+
+    let end = new Date()
+
+    console.log("push and reverse: ", end - start, "ms")
+}
 
 function speedUnshift(){
     let start = new Date()
@@ -26,3 +40,4 @@ function speedUnshift(){
 
 speedPush()
 speedUnshift()
+speedPushReverse()
